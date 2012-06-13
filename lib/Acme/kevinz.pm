@@ -10,11 +10,11 @@ Acme::kevinz - The great new Acme::kevinz!
 
 =head1 VERSION
 
-Version 0.02_02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02_02';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS
@@ -42,11 +42,18 @@ if you don't export anything, such as for a purely object-oriented module.
 sub function1 {
 }
 
-=head2 function2
+=head2 sum
+
+Returns the sum of numbers.
 
 =cut
 
-sub function2 {
+sub sum {
+my $sum;
+foreach (@_) {
+  $sum += $_;
+}
+return $sum;
 }
 
 =head1 AUTHOR
